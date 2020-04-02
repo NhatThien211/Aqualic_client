@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
-import {history} from './../../App';
+import { history } from './../../App';
 // import progress_badge_incomplete from '../../progress_badge_incomplete.png'
 // import progress_badge_in_progress from '../../progress_badge_in_progress.png'
 
@@ -51,15 +51,15 @@ class Lesson extends Component {
         return result;
     }
 
-    onLessonClicked(id){
-        history.push("/lesson/"+id);
+    onLessonClicked(id) {
+        history.push("/lesson/" + id);
     }
 
     render() {
         let { lesson, index } = this.props;
         return (
             <div className="expand-child">
-                <div className="expand-child-lesson" onClick={(event) => {event.preventDefault();this.onLessonClicked(lesson.id)}}>
+                <div className="expand-child-lesson" onClick={(event) => { event.preventDefault(); this.onLessonClicked(lesson.id) }}>
                     <p className="name-lesson">
                         Lesson {index}
                     </p>
@@ -72,7 +72,7 @@ class Lesson extends Component {
                     </ul>
                 </div>
 
-                {this.renderStatus()}
+                {this.renderStatus(lesson)}
 
 
                 {/* {this.renderState(lesson.state)} */}
@@ -80,38 +80,38 @@ class Lesson extends Component {
         );
     }
 
-    renderStatus = () => {
+    renderStatus = (lesson) => {
         let { lesson } = this.props;
         let status = lesson.status;
         if (status === 'Learned') {
-            return (<div className="lesson-progress">
+            return (<div className="lesson-progress" onClick={(event) => {event.preventDefault();this.onLessonClicked(lesson.id)}}>
                 <div className="lesson-progress-icon">
                     <img className="status" src="https://quantic.mba/assets/images/progress_badge_complete-e1752ca9.png" />
                 </div>
                 <div className="lesson-progress-button-done">
-                        DONE
+                    DONE
                 </div>
-             </div >);
+            </div >);
         } else if (status === 'Learning') {
-            return (<div className="lesson-progress">
-            <div className="lesson-progress-icon">
-                <img className="status" src="https://quantic.mba/assets/images/progress_badge_in_progress-d2ccc678.png" />
-            </div>
-            <div className="lesson-progress-button-learning">
+            return (<div className="lesson-progress" onClick={(event) => {event.preventDefault();this.onLessonClicked(lesson.id)}}>
+                <div className="lesson-progress-icon">
+                    <img className="status" src="https://quantic.mba/assets/images/progress_badge_in_progress-d2ccc678.png" />
+                </div>
+                <div className="lesson-progress-button-learning">
                     LEARNING
             </div>
-         </div >);
-          
+            </div >);
+
         } else {
-            return (<div className="lesson-progress">
-            <div className="lesson-progress-icon">
-                <img className="status" src="https://quantic.mba/assets/images/progress_badge_incomplete-b2bb59b9.png" />
-            </div>
-            <div className="lesson-progress-button-start">
+            return (<div className="lesson-progress" onClick={(event) => {event.preventDefault();this.onLessonClicked(lesson.id)}} >
+                <div className="lesson-progress-icon">
+                    <img className="status" src="https://quantic.mba/assets/images/progress_badge_incomplete-b2bb59b9.png" />
+                </div>
+                <div className="lesson-progress-button-start">
                     START
             </div>
-         </div >);
-            
+            </div >);
+
         }
     }
 }
