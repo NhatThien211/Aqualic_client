@@ -208,7 +208,7 @@ class AnswerPageContainer extends Component {
                 </div>
                 <nav className="navbar d-flex justify-content-between">
                     <div className="nav-back d-flex align-items-center col-2 col-sm-3" onClick={(e) => { e.preventDefault(); this.saveAndExit() }}>
-                        <img className="icon-back" src="/images/left-arrow.png" ></img>
+                        <img className="icon-back" src="https://aqualic.blob.core.windows.net/image/left-arrow.png" ></img>
                         <span className="nav-caption" >SAVE AND EXIT</span>
                     </div>
                     <div className="justify-content-center nav-hexa col-8 col-sm-6">
