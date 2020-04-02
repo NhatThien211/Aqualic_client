@@ -19,7 +19,7 @@ class RightBoxDown extends React.Component {
         return (
             <div className="rightboxdown">
                 <div className="rightboxdown-title">
-                    <div className="rightboxdown-title-text">{info.downbox_hello}<br /> {info.user_name}!</div>
+                    <div className="rightboxdown-title-text">{info.downbox_hello}<br /> {localStorage.getItem("USERNAME")}!</div>
                     <div className="rightboxdown-title-iconbox"><img src={info.downbox_icon} className="rightboxdown-title-icon" /></div>
                 </div>
                {this.renderStep(info.steps)}

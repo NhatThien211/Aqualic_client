@@ -42,6 +42,7 @@ class Dashboard extends React.Component {
     })
   }
   logout(){
+    localStorage.clear()
     history.push('/');
   }
 

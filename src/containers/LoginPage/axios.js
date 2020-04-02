@@ -4,6 +4,7 @@ import * as Actions from './actions';
 import * as Constants from '../constant';
 
 export const login = async (dispatch, name, password) => {
+    localStorage.setItem("USERNAME",name);
     let data = JSON.stringify({username : name,password : password});
     console.log(data);
     let res = await callApi(Constants.LOGIN_ENDPOINT,Constants.POST_METHOD,data,Constants.LOGIN); //TODO: Change later
