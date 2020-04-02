@@ -81,7 +81,6 @@ class Lesson extends Component {
     }
 
     renderStatus = (lesson) => {
-        let { lesson } = this.props;
         let status = lesson.status;
         if (status === 'Learned') {
             return (<div className="lesson-progress" onClick={(event) => {event.preventDefault();this.onLessonClicked(lesson.id)}}>
