@@ -120,6 +120,8 @@ class Dashboard extends React.Component {
         }
       }
     }
+    return <TopBox info={info[0]} learning_course={learning_course} learning_course_id={learning_course_id}
+                  learning_lesson={learning_lesson} learning_lesson_id={learning_lesson_id} />
   }
 
 }
