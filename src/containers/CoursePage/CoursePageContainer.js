@@ -17,8 +17,10 @@ class CoursePageContainer extends Component {
     }
 
     componentWillMount() {
-
         let params = this.props.params;
+        if(params!== null && typeof(params) !== 'undefined'){
+            localStorage.setItem("COURSE",parseInt(params.id));
+        } 
         this.setState({ courseID: params });
     }
 

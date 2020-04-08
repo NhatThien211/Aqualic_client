@@ -46,24 +46,26 @@ class AnswerPageContainer extends Component {
     componentWillReceiveProps(nextProps) {
         let video_link= '';
         let { lesson } = nextProps;
+        let courseID_Local = parseInt(localStorage.getItem("COURSE"));
         if (lesson && lesson.questions) {
             let course = nextProps.course;
             for (let i = 0; i < course.length; i++) {
-                let lessonsList = course[i].courseLesson;
-                for (let j = 0; j < lessonsList.length; j++) {
-                    let lessons = lessonsList[j];
-                    let lessonID = lessons.id + "";
-                    if (lessonID === this.state.lessonId) {
-                        this.setState({
-                            lessonIndex: j + 1,
-                            lessonNumber: lessonsList.length,
-                            lessonName: lessons.name,
-                            courseId: course[i].id,
-                        });
-                        video_link = lessons.video_link;
+                if(course[i].id === courseID_Local){
+                    let lessonsList = course[i].courseLesson;
+                    for (let j = 0; j < lessonsList.length; j++) {
+                        let lessons = lessonsList[j];
+                        let lessonID = lessons.id + "";
+                        if (lessonID === this.state.lessonId) {
+                            this.setState({
+                                lessonIndex: j + 1,
+                                lessonNumber: lessonsList.length,
+                                lessonName: lessons.name,
+                                courseId: course[i].id,
+                            });
+                            video_link = lessons.video_link;
+                        }
                     }
                 }
-
             }
             let video = {
                 content: video_link,
