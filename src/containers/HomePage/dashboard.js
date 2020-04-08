@@ -101,27 +101,25 @@ class Dashboard extends React.Component {
   }
 
   RenderTopBox = (array, info) => {
-    let learning_course, learning_course_id, learning_lesson, learning_lesson_id;
-    console.log(array);
-    for (let i = 0; i < array.length; i++) {
-      if (array[i].status === Constant.LEARNING) {
-        learning_course = array[i].name;
-        learning_course_id = array[i].id;
-        for (let j = 0; j < array[i].courseLesson.length; j++) {
-          if (array[i].courseLesson[j].status === Constant.LEARNING) {
-            learning_lesson = array[i].courseLesson[j].name;
-            learning_lesson_id = array[i].courseLesson[j].id;
-            return <TopBox info={info[0]} learning_course={learning_course} learning_course_id={learning_course_id}
-              learning_lesson={learning_lesson} learning_lesson_id={learning_lesson_id} />
-            break;
+    if(array.length > 0){
+      let learning_course, learning_course_id, learning_lesson, learning_lesson_id;
+      for (let i = 0; i < array.length; i++) {
+        if(array[i].status !== null){
+          if (array[i].status === Constant.LEARNING) {
+            learning_course = array[i].name;
+            learning_course_id = array[i].id;
+            for (let j = 0; j < array[i].courseLesson.length; j++) {
+              if (array[i].courseLesson[j].status === Constant.LEARNING) {
+                learning_lesson = array[i].courseLesson[j].name;
+                learning_lesson_id = array[i].courseLesson[j].id;
+                return <TopBox info={info[0]} learning_course={learning_course} learning_course_id={learning_course_id}
+                  learning_lesson={learning_lesson} learning_lesson_id={learning_lesson_id} />
+              }
+            }
           }
         }
-        break;
       }
-      return <TopBox info={info[0]} learning_course={learning_course} learning_course_id={learning_course_id}
-        learning_lesson={learning_lesson} learning_lesson_id={learning_lesson_id} />
     }
-
   }
 
 }
