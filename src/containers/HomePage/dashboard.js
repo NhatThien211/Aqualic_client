@@ -101,8 +101,8 @@ class Dashboard extends React.Component {
   }
 
   RenderTopBox = (array, info) => {
+    let learning_course, learning_course_id, learning_lesson, learning_lesson_id;
     if(array.length > 0){
-      let learning_course, learning_course_id, learning_lesson, learning_lesson_id;
       for (let i = 0; i < array.length; i++) {
         if(array[i].status !== null){
           if (array[i].status === Constant.LEARNING) {
