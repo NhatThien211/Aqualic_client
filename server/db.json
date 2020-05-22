@@ -227,7 +227,7 @@
   "HomePage": [
     {
       "id": 1,
-      "icon": "https://smart.ly/assets/vectors/track_icon-c696c4e1.svg",
+      "icon": "https://aqualic.blob.core.windows.net/image/track_icon.svg",
       "playlist_title": "Bussiness Basics",
       "playlist_subtitle": "4 COURSE - 4 HOURS - O% COMPLETE",
       "description": "Start learning with four core course designed to introduce you to the fields of Finance, Accounting, Economics and Statistics.",
@@ -244,7 +244,7 @@
     {
       "id": 3,
       "user_name": "Thien",
-      "downbox_icon": "https://smart.ly/assets/vectors/brain_onboarding_messenger-84660100.svg",
+      "downbox_icon": "https://aqualic.blob.core.windows.net/image/brain.svg",
       "downbox_hello": "Welcome to Aqualic,",
       "steps": [
         {

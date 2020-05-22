@@ -25,7 +25,6 @@ class CoursePageContainer extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
         this.setState({
             course: nextProps.course,
         })
@@ -58,7 +57,6 @@ class CoursePageContainer extends Component {
 
     render() {
         let { currentCourse } = this.state;
-        console.log(this.state);
         return (
             
             <div className="article">
@@ -77,7 +75,7 @@ class CoursePageContainer extends Component {
                     <div className="top-right-box">
                         <div className="topbox-title">SAVED TO MY COURSES</div>
                         <div className="icon">
-                            <img className="icon-start" src="https://quantic.mba/assets/vectors/star_white-e2068605.svg" />
+                            <img className="icon-start" src="https://aqualic.blob.core.windows.net/image/start.svg" />
                         </div>
                     </div>
                     <div className="smarly-highlight">
@@ -127,7 +125,6 @@ class CoursePageContainer extends Component {
     }
 }
 const mapStateToProps = state => {
-    console.log(state);
     return {
         course: state.dashBoardPage.course,
         message: state.coursePage.course

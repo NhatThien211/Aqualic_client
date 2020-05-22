@@ -6,7 +6,6 @@ import * as Constants from '../constant';
 export const login = async (dispatch, name, password) => {
     localStorage.setItem("USERNAME",name);
     let data = JSON.stringify({username : name,password : password});
-    console.log(data);
     let res = await callApi(Constants.LOGIN_ENDPOINT,Constants.POST_METHOD,data,Constants.LOGIN); //TODO: Change later
     if (res != null) {
         handleResponse(res, dispatch, Constants.LOGIN);
@@ -15,7 +14,6 @@ export const login = async (dispatch, name, password) => {
 
     const handleResponse = async (res, dispatch, action) => {
         let status = res.status;
-        let messages = '';
         switch (status) {
             case 200:
                 await dispatch(Actions.is2xx(status,action,res.data));

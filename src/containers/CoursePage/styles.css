@@ -266,7 +266,7 @@ input {
 .hexagon_total {
   width: 15px;
   height: 17px;
-  background-image: url("https://quantic.mba/assets/vectors/progress_indicator_white_unfilled-60233f4f.svg");
+  background-image: url("https://aqualic.blob.core.windows.net/image/hexagon.svg");
   background-size: 14.95px 17px;
   margin-right: 2px;
   float: right;
@@ -1088,7 +1088,7 @@ input {
   height: 18px;
   width: 18px;
   margin: -7.5px 0 0 -9px;
-  background-image: url("https://quantic.mba/assets/vectors/horizontal_rule_diamond_beige-3a421482.svg");
+  background-image: url("https://aqualic.blob.core.windows.net/image/diamon.svg");
 }
 .bottombox-completeline {
   height: 3px;
@@ -1197,7 +1197,7 @@ height: 20px;
   height: 18px;
   width: 18px;
   margin: -7.5px 0 0 -9px;
-  background-image: url("https://quantic.mba/assets/vectors/horizontal_rule_diamond_beige-3a421482.svg");
+  background-image: url("https://aqualic.blob.core.windows.net/image/diamon.svg");
 }
 .smarly-highlight{
   background-color: #f5f3f1;

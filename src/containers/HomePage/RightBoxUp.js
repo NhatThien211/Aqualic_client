@@ -9,13 +9,13 @@ class RightBoxUp extends React.Component {
                 <div className="rightboxup-contain">
                     <div className="rightboxup-contain-title">
                         <div className="rightboxup-contain-title-hiddenicon">
-                            <img src={info.upbox_icon} className="rightboxup-contain-title-icon" />
+                            <img src={info.upbox_icon} alt="topImage" className="rightboxup-contain-title-icon" />
                         </div>
                         <div className="rightboxup-contain-title-text">
                             {info.upbox_tile}
                             </div>
                         <div className="rightboxup-contain-title-icondiv">
-                            <img src={info.upbox_icon} className="rightboxup-contain-title-icon" />
+                            <img src={info.upbox_icon} alt="rightImage" className="rightboxup-contain-title-icon" />
                         </div>
                     </div>
                     <p className="rightboxup-contain-description">{info.upbox_description}</p>

@@ -85,7 +85,7 @@ class Lesson extends Component {
         if (status === 'Learned') {
             return (<div className="lesson-progress" onClick={(event) => {event.preventDefault();this.onLessonClicked(lesson.id)}}>
                 <div className="lesson-progress-icon">
-                    <img className="status" src="https://quantic.mba/assets/images/progress_badge_complete-e1752ca9.png" />
+                    <img className="status" src="https://aqualic.blob.core.windows.net/image/complete.png" />
                 </div>
                 <div className="lesson-progress-button-done">
                     DONE
@@ -94,7 +94,7 @@ class Lesson extends Component {
         } else if (status === 'Learning') {
             return (<div className="lesson-progress" onClick={(event) => {event.preventDefault();this.onLessonClicked(lesson.id)}}>
                 <div className="lesson-progress-icon">
-                    <img className="status" src="https://quantic.mba/assets/images/progress_badge_in_progress-d2ccc678.png" />
+                    <img className="status" src="https://aqualic.blob.core.windows.net/image/inprocess.png" />
                 </div>
                 <div className="lesson-progress-button-learning">
                     LEARNING
@@ -104,7 +104,7 @@ class Lesson extends Component {
         } else {
             return (<div className="lesson-progress" onClick={(event) => {event.preventDefault();this.onLessonClicked(lesson.id)}} >
                 <div className="lesson-progress-icon">
-                    <img className="status" src="https://quantic.mba/assets/images/progress_badge_incomplete-b2bb59b9.png" />
+                    <img className="status" src="https://aqualic.blob.core.windows.net/image/start.png" />
                 </div>
                 <div className="lesson-progress-button-start">
                     START

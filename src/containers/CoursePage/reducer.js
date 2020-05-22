@@ -8,8 +8,6 @@ const initStage = {
 };
 
 const coursePage = (state = initStage, action) => {
-    console.log(action);
-
     switch (action.type) {
         // Fetch course
         case Actions.FETCH_COURSE:

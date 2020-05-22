@@ -16,7 +16,7 @@ render(){
             <div className="bottombox-text">{info.bottombox_description}</div>
             <div className="bottombox-imagediv">
                 <div className="cetificate">
-                    <img src="https://quantic.mba/assets/images/icon_trophy-96e50b0f.png" className="trophy"/>
+                    <img src="https://aqualic.blob.core.windows.net/image/trophy.png" className="trophy"/>
                 </div>
             </div>
         </div>

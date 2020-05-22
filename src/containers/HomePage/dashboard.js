@@ -8,7 +8,6 @@ import BottomBox from './BottomBox.js';
 import './Dashboard.css';
 import { connect } from 'react-redux';
 import { getMainBox } from './axios';
-import { loadData } from './axios';
 import { history } from './../../App';
 import * as Constant from '../constant';
 import * as Data from './Data';
@@ -53,7 +52,7 @@ class Dashboard extends React.Component {
       <div>
         <nav className="navbar d-flex justify-content-between" style={{marginBottom:30}}>
           <div className="nav-back d-flex align-items-center col-2 col-sm-3">
-            <img className="icon-top" src="https://quantic.edu/assets/vectors/header_logo_quantic-265dc56e.svg" ></img>
+            <img className="icon-top" src="https://aqualic.blob.core.windows.net/image/header_logo.svg" ></img>
             <span className="nav-caption top-name" >AQUALIC</span>
           </div>
           <div>

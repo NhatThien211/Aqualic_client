@@ -82,7 +82,6 @@ class AnswerPageContainer extends Component {
                 latestIndex: nextProps.lesson.latestIndex,
                 userId: nextProps.userId,
             })
-            console.log(nextProps.lesson.questions);
         }
     }
 
@@ -103,12 +102,12 @@ class AnswerPageContainer extends Component {
         let result = [];
         let { curQuestion, latestIndex } = this.state;
         for (let i = 0; i < length; i++) {
-            result.push(<div style={i > latestIndex ? { opacity: .5, pointerEvents: 'none', cursor: 'default' } : {}} onClick={this.onChangeQuestion(i)} key={i} className={curQuestion == i ? 'hexagon_selected hexagon' : 'hexagon_viewed hexagon'} />);
+            result.push(<div style={i > latestIndex ? { opacity: .5, pointerEvents: 'none', cursor: 'default' } : {}} onClick={this.onChangeQuestion(i)} key={i} className={curQuestion === i ? 'hexagon_selected hexagon' : 'hexagon_viewed hexagon'} />);
         }
         return result;
     }
     onSelectedAnswer = (id) => {
-        let { isCorrect, curQuestion, questions } = this.state;
+        let { curQuestion, questions } = this.state;
         let question = questions[curQuestion];
         let hintClass = '';
         if (question) {
@@ -137,7 +136,7 @@ class AnswerPageContainer extends Component {
 
     }
     onClickNextQuestion = () => {
-        let { curQuestion, latestIndex, selectedId } = this.state;
+        let { curQuestion, latestIndex } = this.state;
         let newIndex = curQuestion + 1;
         this.setState({
             curQuestion: newIndex,
@@ -183,7 +182,6 @@ class AnswerPageContainer extends Component {
     }
 
     saveAndExit() {
-        console.log(this.state);
         let { courseId, lessonId, userId, curQuestion, questions } = this.state;
         let status = Constants.LEARNING;
         if (curQuestion === questions.length) {
@@ -234,14 +232,13 @@ class AnswerPageContainer extends Component {
                             {answerMsg == 'Correct' ? <p>Smart choice</p> : <p>Let try again</p>}
                         </div>
                     </div>
-                    <div className={hintClass ? hintClass + " close-button message-close-hexagon" : ""}><img className="hex-close-icon" src="https://quantic.mba/assets/images/hexagon_close-d5d50336.png"></img></div>
+                    <div className={hintClass ? hintClass + " close-button message-close-hexagon" : ""}><img className="hex-close-icon" src="https://aqualic.blob.core.windows.net/image/hexagon_close-6acfa2fb.png"></img></div>
                 </div>
             </div>
         );
     }
 }
 const mapStateToProps = state => {
-    console.log(state);
     return {
         statusCode: state.answerPage.statusCode,
         isLoading: state.answerPage.isLoading,

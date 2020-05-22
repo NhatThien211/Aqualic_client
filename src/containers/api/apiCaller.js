@@ -13,7 +13,7 @@ export default async function callApi(endpoint, method = "GET", body, callKey) {
     //   }
     let headers = {};
     let result = null;
-    if (callKey === Constants.LOGIN || callKey === Constants.REGISTER || callKey == Constants.SAVE_LESSON) {
+    if (callKey === Constants.LOGIN || callKey === Constants.REGISTER || callKey === Constants.SAVE_LESSON) {
         headers = {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',

@@ -35,15 +35,11 @@ class AnswerStage extends Component {
 
     render() {
         let { question, isCorrect } = this.props;
-
-        console.log(question);
-       
         let className = "row answers-stage d-flex justify-content-center ";
         className = isCorrect ? className + "pointer-none" : className;
         if(question !== null && typeof(question) !== 'undefined'){
             if(question.isVideo === true){
                 let link = question.content.replace('https://www.youtube.com/watch?v=','https://www.youtube.com/embed/');
-                console.log(link);
                 return (
                     <div >
                         <div className=" d-flex flex-column align-items-center mx-5 question-stage justify-content-center">

@@ -6,7 +6,6 @@ class Chapter extends Component {
 
     renderLessons = (lessons) =>{
         let result = null;
-        console.log(lessons)
         result = lessons.map((lesson,index) =>{
             return lesson ? <Lesson key={index} index={index+1} lesson={lesson}/> : '';
         })
@@ -23,9 +22,7 @@ class Chapter extends Component {
 
     render() {
         let { chapter,index } = this.props;
-        console.log(chapter);
         return (
-
             <div className="main">
                 <label data-toggle="collapse" data-target={"#toggle-" + index} className="test" aria-expanded="true" aria-controls={"toggle-" + index} >
                     <div className="nameChapter">

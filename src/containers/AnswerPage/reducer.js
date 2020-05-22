@@ -9,8 +9,6 @@ const initStage = {
 };
 
 const answerPage = (state = initStage, action) => {
-    console.log(action);
-
     switch (action.type) {
         // Fetch questions
         case Actions.FETCH_QUESTIONS:

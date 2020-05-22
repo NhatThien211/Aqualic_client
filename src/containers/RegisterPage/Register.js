@@ -21,7 +21,6 @@ class RegisterPage extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
         if (nextProps.user.message == Constant.REGISTER_SUCCESS_MESSAGE) {
             console.assert(nextProps.user.message);
             history.push("/home/"+nextProps.user.id);

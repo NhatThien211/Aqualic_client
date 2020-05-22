@@ -6,8 +6,6 @@ const initStage = {
 };
 
 const registerPage = (state = initStage, action) => {
-    console.log(action);
-
     switch (action.type) {
         // Fetch course
         case Actions.LOGIN:

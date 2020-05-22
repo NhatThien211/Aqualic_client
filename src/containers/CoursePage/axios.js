@@ -18,8 +18,6 @@ export const fetchCourse = async (courseId, dispatch) => {
 
 const handleResponse = async (res, dispatch, action) => {
     let status = res.status;
-    console.log("AXIOUS");
-    let messages = '';
     switch (status) {
         case 200:
             await dispatch(Actions.is2xx(200, action + Constants.PREFIX_OK, res.data));

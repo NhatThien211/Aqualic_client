@@ -2,25 +2,25 @@
 export const INFO = [
   {
     "id": 1,
-    "icon": "https://smart.ly/assets/vectors/track_icon-c696c4e1.svg",
+    "icon": "https://aqualic.blob.core.windows.net/image/track_icon.svg",
     "playlist_title": "Bussiness Basics",
     "playlist_subtitle": "4 COURSE - 4 HOURS - O% COMPLETE",
     "description": "Start learning with four core course designed to introduce you to the fields of Finance, Accounting, Economics and Statistics.",
     "stream_title": "FINANCE: TIME VALUE OF MONEY",
     "lession_title": "NEXT UP: THE TIME VALUE OF MONEY",
-    "sub_icon": "https://quantic.mba/assets/images/mba_icon_quantic-9e4af35a.png",
+    "sub_icon": "https://aqualic.blob.core.windows.net/image/rightbox_icon.png",
      "course": []
   },
   {
     "id": 2,
     "upbox_tile": "Aqualic MBA Program",
     "upbox_description": "Accepting applications for the next admission cycle now.",
-    "upbox_icon": "https://quantic.mba/assets/images/mba_icon_quantic-9e4af35a.png"
+    "upbox_icon": "https://aqualic.blob.core.windows.net/image/rightbox_icon.png"
   },
   {
     "id": 3,
     "user_name": "Thien",
-    "downbox_icon": "https://smart.ly/assets/vectors/brain_onboarding_messenger-84660100.svg",
+    "downbox_icon": "https://aqualic.blob.core.windows.net/image/brain.svg",
     "downbox_hello": "Welcome to Aqualic,",
     "steps": [
       {
